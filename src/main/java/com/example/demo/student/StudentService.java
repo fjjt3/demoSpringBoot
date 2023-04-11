@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -20,9 +21,14 @@ public class StudentService {
     return List.of(
       returnStudentRepository.findAll();
 
-      public void addNewStudent(Student student) {
-        System.out.println(student);
+      public void addNewStudent(Student student){
+        Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+        if (studentByEmail.isPresent()){
+          throw new IllegalStateException("email taken");
+        }
+        studentRepository.save(student);
     }
+
     );
   }
 
