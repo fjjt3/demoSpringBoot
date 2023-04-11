@@ -14,13 +14,11 @@ public class StudentConfig {
         name = "Marian",
         email = "mariam.jamal@gmail.com",
         LocalDate.of(year = 2000, JANUARY, dayOfMonth = 5),
-        age = 23
       );
       new Student alex = new Student(
         name = "Alex",
         email = "alex@gmail.com",
         LocalDate.of(year = 2005, JANUARY, dayOfMonth = 5),
-        age = 21
       );
 
       repository.saveAll(
