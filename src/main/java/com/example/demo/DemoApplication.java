@@ -16,7 +16,7 @@ public class DemoApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(DemoApplication.class, args);
-
+    // check white label error
     @GetMapping
     public List<Student> hello() {
       return List.of(
